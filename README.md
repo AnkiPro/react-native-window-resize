@@ -2,20 +2,32 @@
 
 React Native window resizer for iOS
 
+![example](./assets/example.gif)
+
 ## Installation
 
 ```sh
-npm install @ankipro/react-native-window-resize
+yarn add @ankipro/react-native-window-resize
+```
+
+install pods
+
+```sh
+npx pod-install
 ```
 
 ## Usage
 
-```js
-import { multiply } from '@ankipro/react-native-window-resize';
+```ts
+import WindowResizer from '@ankipro/react-native-window-resize';
 
 // ...
 
-const result = await multiply(3, 7);
+WindowResizer.resizeToDefault();
+
+WindowResizer.resizeTo(deviceModel);
+
+WindowResizer.getAvailableDeviceModels((deviceModels) => ...)
 ```
 
 ## Contributing

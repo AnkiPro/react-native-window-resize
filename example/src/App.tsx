@@ -6,6 +6,7 @@ import WindowResizer, {
 } from '@ankipro/react-native-window-resize';
 
 export default function App() {
+  const [currentDevice, setCurrentDevice] = useState<string>();
   const [deviceModels, setDeviceModels] = useState<ReadonlyArray<DeviceModel>>(
     []
   );
@@ -14,14 +15,32 @@ export default function App() {
     WindowResizer.getAvailableDeviceModels(setDeviceModels);
   }, []);
 
+  const reset = () => {
+    WindowResizer.resizeToDefault();
+    setCurrentDevice('');
+  };
+
   const renderDeviceModel = (deviceModel: DeviceModel) => {
     const handlePress = () => {
+      setCurrentDevice(deviceModel.name);
       WindowResizer.resizeTo(deviceModel.name);
     };
 
     return (
-      <TouchableOpacity style={[styles.deviceButton]} onPress={handlePress}>
-        <Text style={styles.deviceName} key={deviceModel.name}>
+      <TouchableOpacity
+        key={deviceModel.name}
+        style={[
+          styles.deviceButton,
+          currentDevice === deviceModel.name && styles.active,
+        ]}
+        onPress={handlePress}
+      >
+        <Text
+          style={[
+            styles.deviceName,
+            currentDevice === deviceModel.name && styles.activeText,
+          ]}
+        >
           {deviceModel.name} ({deviceModel.width}x{deviceModel.height})
         </Text>
       </TouchableOpacity>
@@ -34,10 +53,7 @@ export default function App() {
 
       {deviceModels.map(renderDeviceModel)}
 
-      <TouchableOpacity
-        style={styles.resetButton}
-        onPress={WindowResizer.resizeToDefault}
-      >
+      <TouchableOpacity style={styles.resetButton} onPress={reset}>
         <Text style={styles.resetText}>Reset</Text>
       </TouchableOpacity>
     </View>
@@ -68,10 +84,16 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     width: '80%',
   },
+  active: {
+    backgroundColor: 'black',
+  },
   deviceName: {
     fontSize: 20,
     fontWeight: '700',
     textAlign: 'center',
+  },
+  activeText: {
+    color: 'white',
   },
   resetButton: {
     paddingVertical: 12,
