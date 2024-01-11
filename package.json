@@ -1,13 +1,12 @@
 {
   "name": "@ankipro/react-native-window-resize",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "React Native window resizer for iOS",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
-  "private": true,
   "files": [
     "src",
     "lib",
