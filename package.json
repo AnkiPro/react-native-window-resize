@@ -1,6 +1,6 @@
 {
   "name": "@ankipro/react-native-window-resize",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React Native window resizer for iOS",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
