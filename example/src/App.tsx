@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import WindowResizer, {
-  type DeviceModel,
-} from '@ankipro/react-native-window-resize';
+import WindowResizer from '@ankipro/react-native-window-resize';
+import type { DeviceModel } from '@ankipro/react-native-window-resize';
 
 export default function App() {
   const [currentDevice, setCurrentDevice] = useState<string>();
