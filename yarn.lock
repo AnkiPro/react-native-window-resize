@@ -46,10 +46,10 @@ __metadata:
     commitlint: 17.0.2
     del-cli: 5.0.0
     eslint: 8.4.1
-    eslint-config-prettier: 8.5.0
-    eslint-plugin-prettier: 4.0.0
+    eslint-config-prettier: 8.10.0
+    eslint-plugin-prettier: 4.2.1
     jest: 28.1.1
-    pod-install: ^0.1.0
+    pod-install: 0.1.39
     prettier: 2.0.5
     react: 18.2.0
     react-native: 0.73.1
@@ -6148,18 +6148,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:8.5.0":
-  version: 8.5.0
-  resolution: "eslint-config-prettier@npm:8.5.0"
-  peerDependencies:
-    eslint: ">=7.0.0"
-  bin:
-    eslint-config-prettier: bin/cli.js
-  checksum: 0d0f5c32e7a0ad91249467ce71ca92394ccd343178277d318baf32063b79ea90216f4c81d1065d60f96366fdc60f151d4d68ae7811a58bd37228b84c2083f893
-  languageName: node
-  linkType: hard
-
-"eslint-config-prettier@npm:^8.5.0":
+"eslint-config-prettier@npm:8.10.0, eslint-config-prettier@npm:^8.5.0":
   version: 8.10.0
   resolution: "eslint-config-prettier@npm:8.10.0"
   peerDependencies:
@@ -6212,22 +6201,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:4.0.0":
-  version: 4.0.0
-  resolution: "eslint-plugin-prettier@npm:4.0.0"
-  dependencies:
-    prettier-linter-helpers: ^1.0.0
-  peerDependencies:
-    eslint: ">=7.28.0"
-    prettier: ">=2.0.0"
-  peerDependenciesMeta:
-    eslint-config-prettier:
-      optional: true
-  checksum: 03d69177a3c21fa2229c7e427ce604429f0b20ab7f411e2e824912f572a207c7f5a41fd1f0a95b9b8afe121e291c1b1f1dc1d44c7aad4b0837487f9c19f5210d
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-prettier@npm:^4.2.1":
+"eslint-plugin-prettier@npm:4.2.1, eslint-plugin-prettier@npm:^4.2.1":
   version: 4.2.1
   resolution: "eslint-plugin-prettier@npm:4.2.1"
   dependencies:
@@ -11058,7 +11032,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pod-install@npm:^0.1.0":
+"pod-install@npm:0.1.39":
   version: 0.1.39
   resolution: "pod-install@npm:0.1.39"
   bin:
