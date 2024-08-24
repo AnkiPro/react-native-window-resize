@@ -1,8 +1,10 @@
 # @ankipro/react-native-window-resize
 
-React Native library to resize app window on iOS. This library is mainly needed to quickly change the screen resolution by simulating different devices without having to open several simulators to test different resolution-dependent functions on the same device. 
+React Native library to resize app window on iOS. This library is mainly needed to quickly change the screen resolution by simulating different devices without having to open several simulators to test different resolution-dependent functions on the same device.
 
 ![example](./assets/example.gif)
+
+Made with 💙 by [Anki Pro](https://ankipro.net/) team
 
 ## Installation
 
